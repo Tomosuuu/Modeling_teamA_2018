@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "試作中"
+        label.text = "タイトル"
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,17 +22,17 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTapped1(_ sender: Any) {
-        label.text = "目覚まし"
+        label.text = "時間割表"
     }
     
     
     @IBAction func buttonTapped2(_ sender: Any) {
-        label.text = "出席管理"
+        label.text = "取得単位"
     }
     
    
     @IBAction func buttonTapped3(_ sender: Any) {
-        label.text = "欠席理由"
+        label.text = "欠席理由の作成"
     }
     
     
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonTapped5(_ sender: Any) {
-        label.text = "単位管理"
+        label.text = "アラーム"
     }
     
     
