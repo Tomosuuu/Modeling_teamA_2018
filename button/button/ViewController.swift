@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+        //以下ボタンのコード
     @IBAction func buttonTapped1(_ sender: Any) {
         label.text = "時間割表"
     }
