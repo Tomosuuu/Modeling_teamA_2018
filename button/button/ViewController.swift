@@ -10,10 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+     @IBAction func goBack(_ segue:UIStoryboardSegue) {}
+    
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "タイトル"
+        label.text = "便利ツール"
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,29 +27,34 @@ class ViewController: UIViewController {
         label.text = "時間割表"
     }
     
+    //単位取得s
+    @IBAction func buttonTapped2(_ sender: AnyObject) {
+        performSegue(withIdentifier: "manage_credit", sender: nil)
+    }
     
-    @IBAction func buttonTapped2(_ sender: Any) {
-        label.text = "取得単位"
+    
+    @IBAction func buttonTapped3(_ sender: AnyObject) {
+        performSegue(withIdentifier: "attend", sender: nil)
     }
     
    
-    @IBAction func buttonTapped3(_ sender: Any) {
+    @IBAction func buttonTapped4(_ sender: Any) {
         label.text = "欠席理由の作成"
     }
     
     
-    @IBAction func buttonTapped4(_ sender: Any) {
+    @IBAction func buttonTapped5(_ sender: Any) {
         label.text = "休講情報"
     }
     
     
-    @IBAction func buttonTapped5(_ sender: Any) {
+    @IBAction func buttonTapped6(_ sender: Any) {
         label.text = "アラーム"
     }
     
     
     
-    @IBAction func buttonTapped6(_ sender: Any) {
+    @IBAction func buttonTapped7(_ sender: Any) {
         label.text = "琉大MAP"
     }
     
