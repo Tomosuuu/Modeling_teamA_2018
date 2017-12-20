@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    
+    
      @IBAction func goBack(_ segue:UIStoryboardSegue) {}
     
     @IBOutlet weak var label: UILabel!
@@ -54,8 +56,8 @@ class ViewController: UIViewController {
     
     
     
-    @IBAction func buttonTapped7(_ sender: Any) {
-        label.text = "琉大MAP"
+    @IBAction func buttonTapped7(_ sender: AnyObject) {
+        performSegue(withIdentifier: "map", sender: nil)
     }
     
 }
