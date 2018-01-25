@@ -976,6 +976,21 @@
             </objects>
             <point key="canvasLocation" x="3048.4375" y="1556.8359375"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="2Hk-83-7GZ">
+            <objects>
+                <viewController id="NUj-E0-lRu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zNv-uO-Wz0">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="wP3-PA-Ku7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqO-J0-JOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="-577"/>
+        </scene>
         <!--mainView Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
