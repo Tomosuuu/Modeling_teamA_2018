@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="alarm_teamA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nW6-8F-fnc">
+                                <rect key="frame" x="166" y="123" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-h8-BGV">
+                                <rect key="frame" x="0.0" y="253" width="375" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="4Ef-tI-gCN"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="535215712.08987802">
+                                    <!--2017-12-17 15:01:52 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="myDPFunc:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ozk-kD-4WG"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-Ch-WBX">
+                                <rect key="frame" x="133" y="480.5" width="108" height="30"/>
+                                <state key="normal" title="起床時間を設定"/>
+                                <connections>
+                                    <action selector="myButtonFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9c-B0-kMA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gis-Ch-WBX" firstAttribute="top" secondItem="pcd-h8-BGV" secondAttribute="bottom" constant="66" id="1RW-K7-rlj"/>
+                            <constraint firstItem="nW6-8F-fnc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="83v-tS-S0i"/>
+                            <constraint firstItem="pcd-h8-BGV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Z4N-na-1ec"/>
+                            <constraint firstAttribute="trailing" secondItem="pcd-h8-BGV" secondAttribute="trailing" id="aCO-tz-Ceo"/>
+                            <constraint firstItem="pcd-h8-BGV" firstAttribute="centerX" secondItem="Gis-Ch-WBX" secondAttribute="centerX" id="aqZ-Jv-FSQ"/>
+                            <constraint firstItem="pcd-h8-BGV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ixj-rj-Jfw"/>
+                            <constraint firstItem="pcd-h8-BGV" firstAttribute="centerX" secondItem="nW6-8F-fnc" secondAttribute="centerX" id="o9j-Uj-QA8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="myDPvar" destination="pcd-h8-BGV" id="gbH-HY-qI4"/>
+                        <outlet property="myLabel" destination="nW6-8F-fnc" id="p4U-sv-myr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
