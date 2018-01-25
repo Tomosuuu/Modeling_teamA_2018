@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D93A78B20196D630090A769 /* 8524.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D93A78A20196D630090A769 /* 8524.mp3 */; };
 		7DDA4F001FE6BDFB0096D8FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA4EFF1FE6BDFB0096D8FA /* AppDelegate.swift */; };
 		7DDA4F021FE6BDFB0096D8FA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DDA4F011FE6BDFB0096D8FA /* ViewController.swift */; };
 		7DDA4F051FE6BDFB0096D8FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DDA4F031FE6BDFB0096D8FA /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D93A78A20196D630090A769 /* 8524.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 8524.mp3; path = ../../../../Downloads/8524.mp3; sourceTree = "<group>"; };
+		7D93A78C20196E180090A769 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7DDA4EFC1FE6BDFB0096D8FA /* alarm_teamA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alarm_teamA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDA4EFF1FE6BDFB0096D8FA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DDA4F011FE6BDFB0096D8FA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 				7DDA4F031FE6BDFB0096D8FA /* Main.storyboard */,
 				7DDA4F061FE6BDFB0096D8FA /* Assets.xcassets */,
 				7DDA4F081FE6BDFB0096D8FA /* LaunchScreen.storyboard */,
+				7D93A78A20196D630090A769 /* 8524.mp3 */,
 				7DDA4F0B1FE6BDFB0096D8FA /* Info.plist */,
 			);
 			path = alarm_teamA;
@@ -130,6 +134,7 @@
 		7DE3E36A1FEA7F0C00BBA5A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7D93A78C20196E180090A769 /* AVFoundation.framework */,
 				7DE3E36B1FEA7F0C00BBA5A8 /* AudioToolbox.framework */,
 			);
 			name = Frameworks;
@@ -243,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7DDA4F0A1FE6BDFB0096D8FA /* LaunchScreen.storyboard in Resources */,
+				7D93A78B20196D630090A769 /* 8524.mp3 in Resources */,
 				7DDA4F071FE6BDFB0096D8FA /* Assets.xcassets in Resources */,
 				7DDA4F051FE6BDFB0096D8FA /* Main.storyboard in Resources */,
 			);

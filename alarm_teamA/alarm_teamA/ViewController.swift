@@ -8,13 +8,26 @@
 
 import UIKit
 import AudioToolbox
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var audioPlayerInstance : AVAudioPlayer! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-    
+        let soundFilePath = Bundle.main.path(forResource: "8524", ofType: "mp3")!
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        // AVAudioPlayerのインスタンスを作成
+        do {
+            audioPlayerInstance = try AVAudioPlayer(contentsOf: sound, fileTypeHint:nil)
+        } catch {
+            print("AVAudioPlayerインスタンス作成失敗")
+        }
+        // バッファに保持していつでも再生できるようにする
+        audioPlayerInstance.prepareToPlay()
+        
         myLabel.text = getNowTime()
         _ = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(ViewController.update(_:)), userInfo: nil, repeats: true)
     }
@@ -63,10 +76,12 @@ class ViewController: UIViewController {
     }
     
     func alert() {
-        let myAlert = UIAlertController(title: "alert", message: "ring ding", preferredStyle: .alert)
+        let myAlert = UIAlertController(title: "alert", message: "設定時刻になりました", preferredStyle: .alert)
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-        let myAction = UIAlertAction(title: "dong",style: .default) {
-            action in print("foo!!")
+        audioPlayerInstance.play()
+        let myAction = UIAlertAction(title: "アラームを止める",style: .default) {
+            action in print("アラームを止める")
+            self.audioPlayerInstance.stop()
         }
         myAlert.addAction(myAction)
         present(myAlert, animated: true,completion: nil)

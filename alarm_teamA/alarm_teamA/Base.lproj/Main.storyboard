@@ -37,8 +37,8 @@
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gis-Ch-WBX">
-                                <rect key="frame" x="164" y="480.5" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="133" y="480.5" width="108" height="30"/>
+                                <state key="normal" title="起床時間を設定"/>
                                 <connections>
                                     <action selector="myButtonFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9c-B0-kMA"/>
                                 </connections>
