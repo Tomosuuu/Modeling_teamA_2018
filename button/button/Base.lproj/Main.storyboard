@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -103,6 +103,61 @@
                 <exit id="PK2-lg-DWz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="136.71875" y="822.65625"/>
+        </scene>
+        <!--Alarm-->
+        <scene sceneID="C7e-Cj-ZEb">
+            <objects>
+                <viewController id="6Pi-3a-Zmg" customClass="alarm" customModule="button" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="513-3A-KFp">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="TfW-mg-MvD">
+                                <rect key="frame" x="0.0" y="404" width="768" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="538539193.36129701">
+                                    <!--2018-01-25 02:13:13 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="myDPFunc:" destination="6Pi-3a-Zmg" eventType="valueChanged" id="OHj-UQ-T28"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8n-lV-LvM">
+                                <rect key="frame" x="328" y="757" width="108" height="30"/>
+                                <state key="normal" title="起床時間を設定"/>
+                                <connections>
+                                    <action selector="myButtonFunc:" destination="6Pi-3a-Zmg" eventType="touchUpInside" id="Tcy-Vq-Jhv"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdY-ly-dss">
+                                <rect key="frame" x="363" y="194" width="42" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="tw8-lu-oNi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UzX-UL-QvF" firstAttribute="bottom" secondItem="z8n-lV-LvM" secondAttribute="bottom" constant="237" id="Acj-e5-R0M"/>
+                            <constraint firstAttribute="trailing" secondItem="TfW-mg-MvD" secondAttribute="trailing" id="E1s-yV-Ase"/>
+                            <constraint firstItem="FdY-ly-dss" firstAttribute="top" secondItem="UzX-UL-QvF" secondAttribute="top" constant="206" id="Rhz-4S-bEY"/>
+                            <constraint firstItem="TfW-mg-MvD" firstAttribute="leading" secondItem="513-3A-KFp" secondAttribute="leading" id="RqD-o3-9ky"/>
+                            <constraint firstItem="TfW-mg-MvD" firstAttribute="centerX" secondItem="FdY-ly-dss" secondAttribute="centerX" id="SkI-fJ-YsT"/>
+                            <constraint firstItem="TfW-mg-MvD" firstAttribute="centerY" secondItem="513-3A-KFp" secondAttribute="centerY" id="rBl-Dy-y41"/>
+                            <constraint firstItem="z8n-lV-LvM" firstAttribute="leading" secondItem="UzX-UL-QvF" secondAttribute="leading" constant="328" id="xBU-NB-vU3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UzX-UL-QvF"/>
+                    </view>
+                    <connections>
+                        <outlet property="myDPvar" destination="TfW-mg-MvD" id="gPw-Tv-odD"/>
+                        <outlet property="myLabel" destination="FdY-ly-dss" id="jwP-lq-zv1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAq-jJ-JsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="617.578125"/>
         </scene>
         <!--map1View Controller-->
         <scene sceneID="5c3-MP-0iC">
@@ -1036,6 +1091,7 @@
                                 <state key="normal" title="アラーム"/>
                                 <connections>
                                     <action selector="buttonTapped6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="58F-1E-mAW"/>
+                                    <segue destination="6Pi-3a-Zmg" kind="showDetail" id="dJg-yc-dnN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icj-6n-HRe">

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D93A78E201976500090A769 /* alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D93A78D201976500090A769 /* alarm.swift */; };
+		7D93A7902022AF7B0090A769 /* 8524.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7D93A78F2022AF7A0090A769 /* 8524.mp3 */; };
 		B817FE5D1FEADD450057FFA1 /* map1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B817FE5C1FEADD450057FFA1 /* map1.swift */; };
 		B8292EB21FE2AD3700B7CA87 /* manage_credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8292EB11FE2AD3700B7CA87 /* manage_credit.swift */; };
 		B86BC7A01FBD2AF8006354EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86BC79F1FBD2AF8006354EC /* AppDelegate.swift */; };
@@ -21,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D93A78D201976500090A769 /* alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarm.swift; sourceTree = "<group>"; };
+		7D93A78F2022AF7A0090A769 /* 8524.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = 8524.mp3; path = ../../../../Downloads/8524.mp3; sourceTree = "<group>"; };
+		7D93A7922022AFF80090A769 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B817FE5C1FEADD450057FFA1 /* map1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = map1.swift; sourceTree = "<group>"; };
 		B8292EB11FE2AD3700B7CA87 /* manage_credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manage_credit.swift; sourceTree = "<group>"; };
 		B86BC79C1FBD2AF8006354EC /* button.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = button.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,11 +52,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D93A7912022AFF70090A769 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D93A7922022AFF80090A769 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B86BC7931FBD2AF8006354EC = {
 			isa = PBXGroup;
 			children = (
 				B86BC79E1FBD2AF8006354EC /* button */,
 				B86BC79D1FBD2AF8006354EC /* Products */,
+				7D93A7912022AFF70090A769 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,10 +88,12 @@
 				B86BC79F1FBD2AF8006354EC /* AppDelegate.swift */,
 				B86BC7A11FBD2AF8006354EC /* ViewController.swift */,
 				B86BC7A31FBD2AF8006354EC /* Main.storyboard */,
+				7D93A78D201976500090A769 /* alarm.swift */,
 				B8292EB11FE2AD3700B7CA87 /* manage_credit.swift */,
 				B86BC7A61FBD2AF8006354EC /* Assets.xcassets */,
 				B86BC7A81FBD2AF8006354EC /* LaunchScreen.storyboard */,
 				B86BC7AB1FBD2AF8006354EC /* Info.plist */,
+				7D93A78F2022AF7A0090A769 /* 8524.mp3 */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -142,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B86BC7AA1FBD2AF8006354EC /* LaunchScreen.storyboard in Resources */,
+				7D93A7902022AF7B0090A769 /* 8524.mp3 in Resources */,
 				B86BC7A71FBD2AF8006354EC /* Assets.xcassets in Resources */,
 				B86BC7A51FBD2AF8006354EC /* Main.storyboard in Resources */,
 			);
@@ -154,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D93A78E201976500090A769 /* alarm.swift in Sources */,
 				B8D8A94F1FEABEE700F31A4E /* map.swift in Sources */,
 				B817FE5D1FEADD450057FFA1 /* map1.swift in Sources */,
 				B86BC7A21FBD2AF8006354EC /* ViewController.swift in Sources */,
@@ -299,6 +317,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = button/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yukyu.button;
@@ -313,6 +332,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = button/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yukyu.button;
