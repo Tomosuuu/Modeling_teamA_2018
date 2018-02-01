@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     
     //単位取得s
     @IBAction func buttonTapped2(_ sender: AnyObject) {
-        performSegue(withIdentifier: "manage_credit", sender: nil)
+      performSegue(withIdentifier: "manage_credit", sender: nil)
     }
     
     
