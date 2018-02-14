@@ -13,6 +13,9 @@ import AVFoundation
 
 class alarm: UIViewController {
     
+    
+     @IBAction func goBack(_ segue:UIStoryboardSegue) {}
+    
     var audioPlayerInstance : AVAudioPlayer! = nil
     
     override func viewDidLoad() {

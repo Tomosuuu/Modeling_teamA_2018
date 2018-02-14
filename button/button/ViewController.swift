@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "便利ツール"
+        label.text = "卍勝ち取り単位卍！！！"
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     }
         //以下ボタンのコード
     @IBAction func buttonTapped1(_ sender: Any) {
-        label.text = "時間割表"
+        performSegue(withIdentifier: "timetable", sender: nil)
     }
     
     //単位取得s
@@ -35,23 +35,19 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func buttonTapped3(_ sender: AnyObject) {
-        performSegue(withIdentifier: "attend", sender: nil)
-    }
-    
    
     @IBAction func buttonTapped4(_ sender: Any) {
-        label.text = "欠席理由の作成"
+        performSegue(withIdentifier: "reason", sender: nil)
     }
     
     
-    @IBAction func buttonTapped5(_ sender: Any) {
-        label.text = "休講情報"
+    @IBAction func buttonTapped5(_ sender: AnyObject) {
+       performSegue(withIdentifier: "rest", sender: nil)
     }
     
     
     @IBAction func buttonTapped6(_ sender: Any) {
-        label.text = "アラーム"
+        label.text = "卍勝ち取り単位卍！！！"
     }
     
     
