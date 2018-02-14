@@ -11,12 +11,13 @@ import UIKit
 import AudioToolbox
 import AVFoundation
 
+var audioPlayerInstance : AVAudioPlayer! = nil
+
 class alarm: UIViewController {
     
     
      @IBAction func goBack(_ segue:UIStoryboardSegue) {}
     
-    var audioPlayerInstance : AVAudioPlayer! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,16 @@ class alarm: UIViewController {
         
         myLabel.text = getNowTime()
         _ = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(alarm.update(_:)), userInfo: nil, repeats: true)
+    }
+    
+    override func viewDidAppear(_ animated:Bool) {
+        super.viewDidAppear(animated)
+        print("viewDidAppearが動いている")
+        if aaa.bool(forKey: "alarm") {
+            alert()
+            print("aaa is true")
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,6 +72,7 @@ class alarm: UIViewController {
     @IBAction func myButtonFunc(_ sender: Any) {
         setTime = tempTime
         print("test: myButton Pushed!")
+        aaa.set(true, forKey: "alarm")
     }
     
     
@@ -80,17 +92,25 @@ class alarm: UIViewController {
     
     func myAlarm(str: String) {
         if str == setTime{
+            aaa.set(true, forKey:"alarm")
+            AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            audioPlayerInstance.play()
             alert()
+            print("myAlarm is moved")
         }
+    }
+    
+    func audioStop() {
+        audioPlayerInstance.stop()
     }
     
     func alert() {
         let myAlert = UIAlertController(title: "alert", message: "設定時刻になりました", preferredStyle: .alert)
-        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
-        audioPlayerInstance.play()
+        
         let myAction = UIAlertAction(title: "アラームを止める",style: .default) {
             action in print("アラームを止める")
-            self.audioPlayerInstance.stop()
+            self.audioStop()
+            aaa.set(false, forKey: "alarm")
         }
         myAlert.addAction(myAction)
         present(myAlert, animated: true,completion: nil)

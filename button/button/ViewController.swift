@@ -8,6 +8,8 @@
 
 import UIKit
 
+let aaa = UserDefaults.standard
+
 class ViewController: UIViewController {
     
     

@@ -27,6 +27,7 @@
 		B8FF908520341ACD00291D81 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF908420341ACD00291D81 /* SecondViewController.swift */; };
 		B8FF908720341B3D00291D81 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF908620341B3D00291D81 /* ThirdViewController.swift */; };
 		B8FF908920341BDF00291D81 /* ForthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF908820341BDF00291D81 /* ForthViewController.swift */; };
+		B8FF908B20342FA400291D81 /* CustomButton2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FF908A20342FA400291D81 /* CustomButton2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		B8FF908420341ACD00291D81 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		B8FF908620341B3D00291D81 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		B8FF908820341BDF00291D81 /* ForthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthViewController.swift; sourceTree = "<group>"; };
+		B8FF908A20342FA400291D81 /* CustomButton2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				B86BC79F1FBD2AF8006354EC /* AppDelegate.swift */,
 				B86BC7A11FBD2AF8006354EC /* ViewController.swift */,
 				B86BC7A31FBD2AF8006354EC /* Main.storyboard */,
+				B8FF908A20342FA400291D81 /* CustomButton2.swift */,
 				B8FF908820341BDF00291D81 /* ForthViewController.swift */,
 				B8FF908620341B3D00291D81 /* ThirdViewController.swift */,
 				B8FF908420341ACD00291D81 /* SecondViewController.swift */,
@@ -196,6 +199,7 @@
 				B8D8A94F1FEABEE700F31A4E /* map.swift in Sources */,
 				B817FE5D1FEADD450057FFA1 /* map1.swift in Sources */,
 				B86BC7A21FBD2AF8006354EC /* ViewController.swift in Sources */,
+				B8FF908B20342FA400291D81 /* CustomButton2.swift in Sources */,
 				B8FF908520341ACD00291D81 /* SecondViewController.swift in Sources */,
 				B8F6F40F1FEB0B32009C1754 /* map3.swift in Sources */,
 				B8FF908920341BDF00291D81 /* ForthViewController.swift in Sources */,
